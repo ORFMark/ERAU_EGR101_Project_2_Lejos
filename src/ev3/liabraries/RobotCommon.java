@@ -109,4 +109,9 @@ public class RobotCommon {
 			}
 		}
 	}
+	public void end()
+	{
+		motorA.close();
+		motorB.close();
+	}
 }

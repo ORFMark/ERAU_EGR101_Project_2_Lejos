@@ -56,6 +56,9 @@ public class Right_Delay {
 		drive.turn(constant.turn4, false, false, true);
 		drive.motorReset();
 		drive.straight(constant.straight5, false);
+		drive.end();
+		sensor1.close();
+		light.close();
 	}
 
 }
