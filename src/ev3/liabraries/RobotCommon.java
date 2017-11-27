@@ -1,5 +1,6 @@
 package ev3.liabraries;
 
+import lejos.hardware.Sound;
 import lejos.hardware.motor.EV3LargeRegulatedMotor;
 import lejos.hardware.port.MotorPort;
 
@@ -18,6 +19,7 @@ public class RobotCommon {
 		motorB.stop();
 		motorA.resetTachoCount();
 		motorB.resetTachoCount();
+		Sound.beepSequenceUp();
 	}
 	public void straight(int value, boolean speed)
 	{
