@@ -1,7 +1,5 @@
 package ev3.exercises;
- import java.sql.Time;
-
-import ev3.liabraries.*;
+ import ev3.liabraries.*;
 import lejos.hardware.Button;
 import lejos.hardware.Sound;
 import lejos.hardware.port.SensorPort;

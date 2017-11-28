@@ -9,7 +9,7 @@ public class Constants {
 	public  final int straight2=800;
 	public  final int turn3=150;
 	public  final int straight3=600;
-	public  final int straight4=600;
+	public  final int straight4=straight3*-1;
 	public  final int turn4=300;
 	public  final int straight5=800;
 	public  final float lightThresh=(float) 0.1;
