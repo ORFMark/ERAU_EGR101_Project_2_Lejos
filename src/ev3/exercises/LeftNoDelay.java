@@ -33,25 +33,42 @@ public class LeftNoDelay {
        
         Button.LEDPattern(4);    // flash green led and 
         Sound.beepSequenceUp();  // make sound when ready.
+        Button.waitForAnyPress();
         drive.motorReset();
-		drive.turn(constant.turn1,true,false,false);
+        System.out.println("Turn 1");
+		drive.turn(constant.turn1,false,false,false);
 		drive.motorReset();
 		drive.straight(constant.strightSpeed1, true);
-		while (!isTouched(touchSP)) {}
+		while (!isTouched(touchSP)) {System.out.println("Straight 1"+isTouched(touchSP));}
 		drive.motorReset();
-		drive.turn(constant.turnSpeed2, false, true, true);
+		System.out.println("Back up");
+		drive.motorA.forward();
+		drive.motorB.forward();
+		drive.motorA.rotate(75,true);
+		drive.motorB.rotate(75,false);
+		drive.motorReset();
+		System.out.println("Turn 2");
+		drive.turn(constant.turnSpeed2, true, true, false);
 		while (light.getRed() >= constant.lightThresh){}
 		drive.motorReset();
-		drive.straight(constant.straight2, false);
+		System.out.println("Straight 2");
+		drive.straight(constant.straight2,false);
 		drive.motorReset();
-		drive.turn(constant.turn3, false, false, true);
+		System.out.println("Straight 6");
+		drive.straight(constant.straight6, false);
 		drive.motorReset();
+		System.out.println("Turn 3");
+		drive.turn(constant.turn3, true, false, false);
+		drive.motorReset();
+		System.out.println("Straight 3/4");
 		drive.straight(constant.straight3, false);
 		drive.motorReset();
 		drive.straight(constant.straight4, false);
 		drive.motorReset();
+		System.out.println("Turn 4");
 		drive.turn(constant.turn4, false, false, true);
 		drive.motorReset();
+		System.out.println("straight 5");
 		drive.straight(constant.straight5, false);
 		drive.end();
 		sensor1.close();
