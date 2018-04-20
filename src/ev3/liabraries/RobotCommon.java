@@ -20,6 +20,8 @@ public class RobotCommon {
 		motorB.stop();
 		motorA.resetTachoCount();
 		motorB.resetTachoCount();
+		motorA.setSpeed(310);
+		motorB.setSpeed(300);
 		Sound.beepSequenceUp();
 		Delay.msDelay(250);
 	}
